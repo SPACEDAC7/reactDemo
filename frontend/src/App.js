@@ -1,6 +1,9 @@
 import React from "react";
 import './index.scss';
 import Board from './Board'
+import About from "./About";
+import Home from "./Home";
+import { Route, Link } from "react-router-dom";
 
 class App extends React.Component {
     constructor(props) {
@@ -86,18 +89,28 @@ class App extends React.Component {
         }
 
         return (
-            <div className="game">
-                <div className="game-board">
-                    <Board
-                        squares={current.squares}
-                        onClick={i => this.handleClick(i)}
-                    />
+                <div>
+                    <nav className="navbar navbar-light">
+                        <ul className="nav navbar-nav">
+                            <li><Link to="/">Homes</Link></li>
+                            <li><Link to="/about">About</Link></li>
+                        </ul>
+                    </nav>
+                    <div className="game">
+                        <div className="game-board">
+                            <Board
+                                squares={current.squares}
+                                onClick={i => this.handleClick(i)}
+                            />
+                        </div>
+                        <div className="game-info">
+                            <div>{status}</div>
+                            <ol>{moves}</ol>
+                        </div>
+                    </div>
+                    <Route path="/about" component={About}/>
+                    <Route exact path="/" component={Home}/>
                 </div>
-                <div className="game-info">
-                    <div>{status}</div>
-                    <ol>{moves}</ol>
-                </div>
-            </div>
         );
     }
 }

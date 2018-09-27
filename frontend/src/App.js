@@ -1,8 +1,8 @@
 import React from "react";
 import './index.scss';
-import Board from './Board'
+import Board from './Board';
 import About from "./About";
-import Home from "./Home";
+import BeerList from "./BeerList";
 import { Route, Link } from "react-router-dom";
 
 class App extends React.Component {
@@ -109,7 +109,7 @@ class App extends React.Component {
                         </div>
                     </div>
                     <Route path="/about" component={About}/>
-                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/" component={BeerList}/>
                 </div>
         );
     }

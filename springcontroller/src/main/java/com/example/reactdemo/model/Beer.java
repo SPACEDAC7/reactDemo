@@ -3,12 +3,14 @@ package com.example.reactdemo.model;
 public class Beer {
     private Long id;
     private String name;
+    private String description;
 
     private Beer() {}
 
-    public Beer(Long id, String name) {
+    public Beer(Long id, String name, String description) {
         this.id = id;
         this.name = name;
+        this.description = description;
     }
 
     public Long getId() {
@@ -27,11 +29,20 @@ public class Beer {
         this.name = name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "Beer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

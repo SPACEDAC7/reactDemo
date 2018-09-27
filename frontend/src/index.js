@@ -1,4 +1,8 @@
 import React from 'react';
-import { combineReducers } from 'redux';
+import App from "./App";
+import ReactDOM from "react-dom";
 
-export default combineReducers({})
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);

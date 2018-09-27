@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'development') {
 
     if (typeof devToolsExtension === 'function') {
         enhancers.push(devToolsExtension())
-    }
+}
 }
 
 const composedEnhancers = compose(
@@ -32,4 +32,4 @@ const store = createStore(
     composedEnhancers
 )
 
-export default store
+export default store;

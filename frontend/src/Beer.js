@@ -1,21 +1,13 @@
 import React from "react";
-import { Route,Link } from "react-router-dom";
 
-function Beer(props){
+function Beer(match){
     return (
         <li>
-            <Link to={`/beer/${props.id}`}>{props.name}</Link>
-            <Route path={`/beer/${props.id}`} component={BeerDetails}/>
+            <p>ID: {match.id} - Name: {match.name}</p>
         </li>
 
     );
 
 }
-
-const BeerDetails = ({ match }) => (
-    <div>
-        <h3>ID: {match.params.id}</h3>
-    </div>
-);
 
 export default Beer;

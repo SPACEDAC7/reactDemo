@@ -34,7 +34,8 @@ class BeerList extends React.Component{
             <div>
                 <h1>List of beers</h1>
                 <ul>
-                    {this.state.beers.map( beer => <Beer key={beer.id} id={beer.id} name={beer.name}/>)}
+                    {this.state.beers.map( beer =>
+                        <Beer key={beer.id} id={beer.id} name={beer.name}/>)}
                 </ul>
             </div>
         );

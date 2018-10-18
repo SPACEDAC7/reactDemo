@@ -92,7 +92,7 @@ class App extends React.Component {
                 <div>
                     <nav className="navbar navbar-light">
                         <ul className="nav navbar-nav">
-                            <li><Link to="/">Homes</Link></li>
+                            <li><Link to="/beer">Homes</Link></li>
                             <li><Link to="/about">About</Link></li>
                         </ul>
                     </nav>
@@ -109,7 +109,7 @@ class App extends React.Component {
                         </div>
                     </div>
                     <Route path="/about" component={About}/>
-                    <Route exact path="/" component={BeerList}/>
+                    <Route exact path="/beer" component={BeerList}/>
                 </div>
         );
     }

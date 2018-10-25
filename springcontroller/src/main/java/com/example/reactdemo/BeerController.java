@@ -34,7 +34,7 @@ public class BeerController {
         res.add(new Beer(12L,"Judas", "Strong beer"));
         res.add(new Beer(13L,"AKDawn", "Strange beer that I tasted only two times"));
         res.add(new Beer(14L,"Delium Tremens", "Good name, worse taste"));
-        res.add(new Beer(15L,"Amstel", "Cheap adn not too bad"));
+        res.add(new Beer(15L,"Amstel", "Cheap and not too bad"));
         res.add(new Beer(16L,"Beer", "Generic description"));
     }
 
